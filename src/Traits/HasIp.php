@@ -8,7 +8,7 @@ trait HasIp
 {
     public function scopeWithIpAddress($query, ?string $ipAddress = null): void
     {
-        $query->where('ip', $ipAddress ?? request()?->ip());
+        $query->where('ip_address', $ipAddress ?? request()?->ip());
     }
 
     public static function bootHasIp(): void
